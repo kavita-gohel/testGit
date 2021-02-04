@@ -1,0 +1,27 @@
+<div>
+    <table width="100%">
+        <tr>
+            <td width="80%">
+                <h1>Users</h1>
+            </td>
+            <td>
+                <button mat-raised-button>Add New User</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Select any one user
+        </mat-panel-title>
+       </mat-expansion-panel-header>
+      <mat-form-field>
+        <li *ngFor="let val of value">
+            {{val.username}}
+        </li>
+      </mat-form-field>
+      </mat-expansion-panel>
+</mat-accordion>
