@@ -13,13 +13,11 @@ export class UserListComponent implements OnInit {
   email: any
   value: any
   constructor(private UserService:  UserService) { }
-
-
+ 
   ngOnInit(): void {
     this.UserService.getData().subscribe((data:any)=>{
       console.log(data);
       this.value=data;
-     
       
     });
   

@@ -2,9 +2,7 @@ table, tr, td{
     margin: 15px;
     color: darkslategray;
 }
-button{
-    font-size: large;
-    color: darkslategray;
-    background-color: darkgray;
-    
+#item{
+width: 100%;
+text-align: left 20px;
 }
