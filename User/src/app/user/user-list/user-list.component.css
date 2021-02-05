@@ -6,3 +6,8 @@ table, tr, td{
 width: 100%;
 text-align: left 20px;
 }
+
+mat-expansion-panel{
+    padding-left: 150px;
+    padding-right: 150px;
+}

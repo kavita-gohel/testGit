@@ -1,4 +1,14 @@
 div{
-    width: 500px;
+    width: 400px;
     margin: 50px;
 }
+img{
+    
+    height: 150px;
+    width: 150px;
+    border:1px solid;
+    border-radius:50%;
+    align-items: center;     
+    margin-left: 200px;
+    margin-top: 100px;
+}   

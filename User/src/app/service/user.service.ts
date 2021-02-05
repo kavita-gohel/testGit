@@ -1,19 +1,36 @@
-import { Injectable } from '@angular/core';
 
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-@Injectable({
-  providedIn: 'root'
-})
+import { analyzeAndValidateNgModules } from '@angular/compiler';
+
+
+  @Injectable({
+    providedIn: 'root'
+  })
+  
+
 export class UserService {
-  constructor(private httpClient: HttpClient) { }
 
-  public getData(): Observable<any>{
-    
-    return this.httpClient.get(`https://my.api.mockaroo.com/user.json?key=089d2540`);
+   
+   constructor() { }
 
-  }
-  public getProfile(): Observable<any>{
-    return this.httpClient.get(`https://my.api.mockaroo.com/profile.json?key=6a7df540`);
-  }
-}
+    public getData() {
+      return [
+        {id: 1,name:'abc',email:'abc@gmail.com',contact:'+91 7787871111',hobbies:['xyz','abc','pqr'],dob:'01/23/2002'},
+        {id: 2,name:'abc',email:'abc@gmail.com',contact:'+91 7787871111',hobbies:['xyz','abc','pqr'],dob:'01/23/2002'},
+        {id: 3,name:'abc',email:'abc@gmail.com',contact:'+91 7787871111',hobbies:['xyz','abc','pqr'],dob:'01/23/2002'},
+        {id: 4,name:'abc',email:'abc@gmail.com',contact:'+91 7787871111',hobbies:['xyz','abc','pqr'],dob:'01/23/2002'},
+        {id: 5,name:'abc',email:'abc@gmail.com',contact:'+91 7787871111',hobbies:['xyz','abc','pqr'],dob:'01/23/2002'},
+        {id: 6,name:'abc',email:'abc@gmail.com',contact:'+91 7787871111',hobbies:['xyz','abc','pqr'],dob:'01/23/2002'},
+        {id: 7,name:'abc',email:'abc@gmail.com',contact:'+91 7787871111',hobbies:['xyz','abc','pqr'],dob:'01/23/2002'},
+        {id: 8,name:'abc',email:'abc@gmail.com',contact:'+91 7787871111',hobbies:['xyz','abc','pqr'],dob:'01/23/2002'},
+        {id: 9,name:'abc',email:'abc@gmail.com',contact:'+91 7787871111',hobbies:['xyz','abc','pqr'],dob:'01/23/2002'},
+        {id: 10,name:'abc',email:'abc@gmail.com',contact:'+91 7787871111',hobbies:['xyz','abc','pqr'],dob:'01/23/2002'}
+  
+      ];
+      }
+    }      
+        
+      
+  

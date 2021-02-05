@@ -2,28 +2,32 @@
     <mat-tab-group mat-align-tabs="start">
         <mat-tab label="Personal Details">
        <mat-card>
-           name
+        Username : &nbsp;&nbsp; {{name[0]}}
        </mat-card>
        <mat-card>
-        name
-    </mat-card>
-   
-    <mat-card>
-        name
-    </mat-card>
-   
-    <mat-card>
-        name
-    </mat-card>
-   
+        Name :&nbsp;&nbsp;{{fname[0]}}&nbsp;&nbsp;&nbsp;{{lname[0]}}
+        </mat-card>
+        <mat-card>
+        Date of Birth : &nbsp;&nbsp; {{dob[0]}}
+        </mat-card>
+        <mat-card>
+          Email : &nbsp;&nbsp; {{email[0]}}
+            </mat-card>
+            <mat-card>
+               Gender : &nbsp;&nbsp; {{gen[0]}}
+                </mat-card>
+                <mat-card>
+                    Contact No. : &nbsp;&nbsp; {{con_no[0]}}
+                    </mat-card>
+        
         </mat-tab>
         <mat-tab label="Hobbies">
             <mat-list>
-                <mat-list-item>Hobby</mat-list-item>
+                <mat-list-item>{{hobby1[0]}}</mat-list-item>
                 <mat-divider></mat-divider>
-                <mat-list-item>hobby</mat-list-item>
+                <mat-list-item>{{hobby2[0]}}</mat-list-item>
                 <mat-divider></mat-divider>
-                <mat-list-item>Hobby</mat-list-item>
+                <mat-list-item>{{hobby3[0]}}</mat-list-item>
               </mat-list>
         </mat-tab>
         
