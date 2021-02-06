@@ -1,35 +1,36 @@
-<div>
-    <mat-tab-group mat-align-tabs="start">
-        <mat-tab label="Personal Details">
+<app-profile></app-profile>
+<div *ngIf="user">
+     <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="Personal Details" >
        <mat-card>
-        Username : &nbsp;&nbsp; {{name[0]}}
+        Username : &nbsp;&nbsp; {{user.name}}
        </mat-card>
-       <mat-card>
+       <!-- <mat-card>
         Name :&nbsp;&nbsp;{{fname[0]}}&nbsp;&nbsp;&nbsp;{{lname[0]}}
+        </mat-card> -->
+        <mat-card>
+        Date of Birth : &nbsp;&nbsp; {{user.dob}}
         </mat-card>
         <mat-card>
-        Date of Birth : &nbsp;&nbsp; {{dob[0]}}
-        </mat-card>
-        <mat-card>
-          Email : &nbsp;&nbsp; {{email[0]}}
+          Email : &nbsp;&nbsp; {{user.email}}
             </mat-card>
-            <mat-card>
+            <!-- <mat-card>
                Gender : &nbsp;&nbsp; {{gen[0]}}
-                </mat-card>
+                </mat-card> -->
                 <mat-card>
-                    Contact No. : &nbsp;&nbsp; {{con_no[0]}}
+                    Contact No. : &nbsp;&nbsp; {{user.contact}}
                     </mat-card>
         
         </mat-tab>
         <mat-tab label="Hobbies">
-            <mat-list>
-                <mat-list-item>{{hobby1[0]}}</mat-list-item>
+            <mat-list >
+                <mat-list-item *ngif="hobbies">{{user.hobbies}}
+                <mat-divider></mat-divider></mat-list-item>
+                <!-- <mat-list-item>{{user.hobbies[1]}}</mat-list-item>
                 <mat-divider></mat-divider>
-                <mat-list-item>{{hobby2[0]}}</mat-list-item>
-                <mat-divider></mat-divider>
-                <mat-list-item>{{hobby3[0]}}</mat-list-item>
+                <mat-list-item>{{user.hobbies[2]}}</mat-list-item> -->
               </mat-list>
         </mat-tab>
         
-      </mat-tab-group>
+      </mat-tab-group> 
 </div>

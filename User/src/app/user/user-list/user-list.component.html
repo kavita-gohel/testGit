@@ -11,6 +11,29 @@
     </table>
 </div>
 <div>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let item of user">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{item.name}}
+        </mat-panel-title>
+       </mat-expansion-panel-header>
+        <div>
+             {{item.email}}
+             <hr>
+            {{item.contact}}
+            <hr>
+            <button mat-raised-button (click)="viewProfile(item)" [routerLink]="['/profile']" [queryParams]="item" >View Full Profile</button>
+         </div>
+
+    </mat-expansion-panel>
+    </mat-accordion>
+</div> 
+
+  <!-- <div style="display: flex; flex-grow: grow">
+
+    <app-single-user [user]="data"></app-single-user>
+</div> -->
 <!-- <mat-accordion>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
@@ -159,4 +182,4 @@
            </div>
       </mat-expansion-panel>
 </mat-accordion>
-</div> -->
+-->

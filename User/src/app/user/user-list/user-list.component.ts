@@ -1,7 +1,8 @@
 import { SingleUserComponent } from './../single-user/single-user.component';
 import { Observable } from 'rxjs';
 import { UserService } from './../../service/user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -19,12 +20,23 @@ export class UserListComponent implements OnInit {
   // mail: any;
   // moNo: any;
   // httpClient: any;
+    user : any
   UserService: any;
- // @Output() opToProfile = new EventEmitter<any>();
+  name: any;
+  data: any
+  //@Output() opToProfile = new EventEmitter<any>();
+ 
   //public userData = [];
-  constructor(private _userService : UserService) { }
-  ngOnInit(): void {
-    console.log(this._userService.getData());
+  constructor(private _userService : UserService, private router: Router) { }
+     ngOnInit(): void {
+     this.user = this._userService.getData();
+    }
+    viewProfile(data: any){
+    this.data =  data;
+  //  this.router.navigate( ['profile'], { queryParams: {data}});
+      
+    this.router.navigateByUrl('/profile', { state: { view: this.data } });
+
     }
 
   

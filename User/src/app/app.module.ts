@@ -2,7 +2,7 @@ import { UserService } from './service/user.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule , routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { SingleUserComponent } from './user/single-user/single-user.component';
@@ -17,12 +17,15 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     SingleUserComponent,
-    ProfileComponent
+    ProfileComponent,
+    routingComponent,
+    UserprofileComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import {MatListModule} from '@angular/material/list';
     MatTabsModule,
     MatCardModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    AppRoutingModule
   ],
   exports:[
     MatExpansionModule,
